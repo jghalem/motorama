@@ -11,9 +11,9 @@ if($_POST) {
 	$cr_data_registro = $_POST['data_registro'];
 	$cr_foto = $_POST['foto'];
  
-    $id = $_POST['id'];
+    $id = $_POST['id_usuario'];
  
-    $sql = "UPDATE members SET nome = '$cr_nome', senha = '$cr_senha', email = '$cr_email', data_nasc = '$cr_data_nasc', data_registro = '$cr_data_registro', foto = '$cr_foto' WHERE id = {$id}";
+    $sql = "UPDATE members SET nome = '$cr_nome', senha = '$cr_senha', email = '$cr_email', data_nasc = '$cr_data_nasc', data_registro = '$cr_data_registro', foto = '$cr_foto' WHERE id_usuario = {$id}";
     if($connect->query($sql) === TRUE) {
         echo "<p>Usuário atualizado com sucesso!</p>";
         echo "<a href='../edit.php?id=".$id."'><button type='button'>Voltar</button></a>";

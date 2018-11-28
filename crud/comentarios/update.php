@@ -6,9 +6,9 @@ if($_POST) {
     $cr_comentario = $_POST['comentario'];
 	
 	
-    $id = $_POST['id'];
+    $id = $_POST['id_comentario'];
  
-    $sql = "UPDATE comentarios SET comentario = '$cr_comentario' WHERE id = {$id}";
+    $sql = "UPDATE comentarios SET comentario = '$cr_comentario' WHERE id_comentario = {$id}";
     if($connect->query($sql) === TRUE) {
         echo "<p>Comentário atualizado com sucesso!</p>";
         echo "<a href='../edit.php?id=".$id."'><button type='button'>Voltar</button></a>";
