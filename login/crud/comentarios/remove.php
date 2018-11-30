@@ -1,6 +1,6 @@
 <?php 
  
-require_once '../db_connect.php';
+require "../db_connect.php";
  
 if($_POST) {
     $id = $_POST['id_comentario'];

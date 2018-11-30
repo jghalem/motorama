@@ -22,7 +22,7 @@ exit;
 * Caso o número de linhas retornadas seja 1 o login é válido, 
 * caso 0, inválido. 
 */ 
-$SQL = "SELECT id_usuario, nome, login, senha, 
+$SQL = "SELECT id_usuario, nome, login, senha, user_type, 
 FROM usuarios 
 WHERE login = ".$login.""; 
 
@@ -59,6 +59,7 @@ if(!strcmp($senha, $row["senha"]))
 // TUDO OK! Agora, passa os dados para a sessão e redireciona o usuário 
 $_SESSION["id_usuario"]= $row["id_usuario"]; 
 $_SESSION["nome"] = stripslashes($row["nome"]); 
+$_SESSION["user_type"] = $row["user_type"];
 /*$_SESSION["permissao"]= $row["postar"];*/ 
 header("Location: index.php"); 
 exit; 

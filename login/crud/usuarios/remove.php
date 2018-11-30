@@ -1,15 +1,15 @@
 <?php 
  
-require_once '../db_connect.php';
+require "../db_connect.php";
  
 if($_POST) {
     $id = $_POST['id_usuario'];
 
-    if ($_POST['tipo_usuario'] == "administrador")
+    if ($_POST['user_type'] == "administrador")
     {
     $sql = "DELETE FROM usuarios WHERE id_usuario = {$id}";
     }
-    else if ($_POST['tipo_usuario'] !== "administrador")
+    else if ($_POST['user_type'] !== "administrador")
     {
         echo "<p>Erro: Você precisa ser um administrador para apagar usuários</p>";
         echo "<a href='../index.php'><button type='button'>Início</button></a>";

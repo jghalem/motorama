@@ -1,6 +1,6 @@
 <?php 
  
-require_once '../db_connect.php';
+require "../db_connect.php";
  
 if($_POST) {
     $cr_nome = $_POST['nome'];
