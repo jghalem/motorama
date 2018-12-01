@@ -6,7 +6,10 @@ session_start();
 if(!isset($_SESSION["id_usuario"]) || !isset($_SESSION["nome"])) 
 { 
 // Usuário não logado! Redireciona para a página de login 
-header("Location: login.html"); 
-exit; 
+//header("Location: login.html"); 
+session_destroy();
+echo "Você foi desconectado. Retornando para a página inicial..";
+sleep(4);
+header("Location: login.html");
 } 
 ?> 

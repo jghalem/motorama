@@ -1,6 +1,6 @@
 <?php 
 // Conexão com o banco de dados 
-require "comum.php"; 
+require "crud/db_connect.php"; 
 
 // Inicia sessões 
 session_start(); 
@@ -22,15 +22,15 @@ exit;
 * Caso o número de linhas retornadas seja 1 o login é válido, 
 * caso 0, inválido. 
 */ 
-$SQL = "SELECT id_usuario, nome, login, senha, user_type, 
+/*$SQL = "SELECT id_usuario, nome, login, senha, tipo_usuario, 
 FROM usuarios 
-WHERE login = ".$login.""; 
+WHERE login = ".$login.""; */
 
 
 //$result_id = @mysql_query($SQL) or die("Erro no banco de dados!"); 
 //$total = @mysql_num_rows($result_id); 
 
-$res = $MySQLiconn->query("SELECT * FROM usuarios WHERE login = '".$login."'");
+$res = $connect->query("SELECT * FROM usuarios WHERE login = '".$login."'");
 $row=$res->fetch_array();
 
 /*	
@@ -59,7 +59,7 @@ if(!strcmp($senha, $row["senha"]))
 // TUDO OK! Agora, passa os dados para a sessão e redireciona o usuário 
 $_SESSION["id_usuario"]= $row["id_usuario"]; 
 $_SESSION["nome"] = stripslashes($row["nome"]); 
-$_SESSION["user_type"] = $row["user_type"];
+$_SESSION["tipo_usuario"] = $row["tipo_usuario"];
 /*$_SESSION["permissao"]= $row["postar"];*/ 
 header("Location: index.php"); 
 exit; 

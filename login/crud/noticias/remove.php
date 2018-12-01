@@ -1,15 +1,17 @@
-<?php 
+<?php
  
 require_once "../db_connect.php";
- 
-if($_POST) {
-    $id = $_GET['id_noticia'];
 
-    if ($_SESSION['tipo'] == "1") 
+require_once "../../validar.php";
+ 
+if($_REQUEST) {
+    $id = $_GET['id'];
+
+    if ($_SESSION['tipo_usuario'] == "1") 
     {
     $sql = "DELETE FROM noticias WHERE id_noticia = {$id}";
     }
-    else if ($_POST['user_type'] !== "1") 
+    else if ($_SESSION['tipo_usuario'] !== "1") 
     {
         echo "<p>Erro: Você precisa ser um administrador para apagar notícias!</p>";
         echo "<a href='../../index.php'><button type='button'>Início</button></a>";
@@ -18,6 +20,7 @@ if($_POST) {
     if($connect->query($sql) === TRUE) {
         echo "<p>Notícia apagada com sucesso!</p>";
         echo "<a href='../../index.php'><button type='button'>Início</button></a>";
+        exit;
     } else {
         echo "Erro ao apagar notícia: " . $connect->error;
     }
