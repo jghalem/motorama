@@ -73,10 +73,6 @@ if($result->num_rows <> 0)
 // Abre tabela HTML 
 echo "<table border=1 cellpadding=3 cellspacing=0>\n";
 echo "<tr><th>ID</th><th>Título</th><th>Par 1</th><th>Img 1</th><th>Postado em:</th>";
-if ($_SESSION['tipo_usuario'] == '1')
-{
-echo "<th>Opções</th></tr>\n";
-}
 
 // Efetua o loop no banco de dados 
 while($dados=$result->fetch_array())
@@ -88,14 +84,7 @@ echo "</a></td>";
 
 echo "<td>" .  $dados["par1"] . "</td>\n";
 echo "<td><img src=' " .  $dados["img1"] . "' alt='Img 1'></td>\n";
-echo "<td>{$dados['data']}</td>";
-
-if ($_SESSION['tipo_usuario'] == '1')
-{
-echo "<td><a href='editar_noticia.php?id=".$dados['id_noticia']."'><button type='text'>Editar</button></a>";
-echo " | <a href='crud/noticias/remove.php?id=".$dados['id_noticia']."'><button type='text'>Deletar</button></a></td>";
-}
-echo "</tr>";
+echo "<td>{$dados['data']}</td></tr>";
 } 
 
 // Fecha tabela 

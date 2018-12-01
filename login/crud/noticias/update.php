@@ -17,7 +17,7 @@ if($_POST) {
     $tipo = $_SESSION['tipo_usuario'];
 
     $id = $_GET['id'];
-    if ($tipo == "1" || "original_poster" == $_SESSION['id_usuario'])
+    if ($tipo == "1")
     {
     $sql = "UPDATE noticias SET titulo = '$cr_titulo', par1 = '$cr_par1', img1 = '$cr_img1', par2 = '$cr_par2', img2 = '$cr_img2', par3 = '$cr_par3', img3 = '$cr_img3', par4 = '$cr_par4', img4 = '$cr_img4' WHERE id_noticia = {$id}";
     }
@@ -32,7 +32,7 @@ if($_POST) {
 
     if($connect->query($sql) === TRUE) {
         echo "<p>Notícia atualizada com sucesso!</p>";
-        echo "<a href='../../index.php'><button type='button'>Início</button></a>";
+        echo "<a href='../../ver_noticia.php?id=".$_GET['id']."'><button type='button'>Voltar</button></a>";
     } else {
         echo "Erro atualizando usuário : ". $connect->error;
     }

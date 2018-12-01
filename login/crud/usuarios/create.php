@@ -4,7 +4,7 @@ require "../db_connect.php";
  
 if($_POST) {
     $cr_nome = $_POST['nome'];
-    $cr_login = $_POST['login'];
+    $cr_username = $_POST['username'];
     $cr_senha = $_POST['senha'];
     $cr_email = $_POST['email'];
 	$cr_data_nasc = $_POST['data_nasc'];
@@ -12,7 +12,7 @@ if($_POST) {
 	$cr_foto = $_POST['foto'];
 	
  
-    $sql = "INSERT INTO usuarios (nome, login, senha, email, data_nasc, data_registro, foto) VALUES ('$cr_nome', '$cr_login', '$cr_senha', '$cr_email', '$cr_data_nasc', '$cr_data_registro', '$cr_foto')";
+    $sql = "INSERT INTO usuarios (nome, username, senha, email, data_nasc, data_registro, foto) VALUES ('$cr_nome', '$cr_username', '$cr_senha', '$cr_email', '$cr_data_nasc', '$cr_data_registro', '$cr_foto')";
     if($connect->query($sql) === TRUE) {
         echo "<p>Usuário criado com sucesso!</p>";
         echo "<a href='../create.php'><button type='button'>Voltar</button></a>";

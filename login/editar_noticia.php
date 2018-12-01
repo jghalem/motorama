@@ -4,7 +4,11 @@ require_once "crud/db_connect.php";
 require_once "validar.php";
 
 $id = $_GET['id'];
+if ($_SESSION['tipo_usuario'] == "1")
+{
 $sql = 'SELECT id_noticia,titulo,par1,img1,par2,img2,par3,img3,par4,img4,original_poster from noticias where id_noticia =' .$id;
+}
+
 $resultado = $connect->query($sql);
 
 echo '<form method="post" action="crud/noticias/update.php?id='.$id.'">';

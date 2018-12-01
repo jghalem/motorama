@@ -1,16 +1,22 @@
 <?php 
  
-require "../db_connect.php";
+require_once "../db_connect.php";
+require_once "../../validar.php";
  
-if($_POST) {
-    $cr_comentario = $_POST['comentario'];
-	
- 
-    $sql = "INSERT INTO comentarios (comentario) VALUES ('$cr_comentario')";
+if($_GET) {
+    $cr_id_noticia = $_GET['id_noticia'];
+    $cr_user_comentario = $_SESSION["id_usuario"];
+    $cr_conteudo_comentario = $_GET['conteudo_comentario'];	
+
+    echo '<input type="hidden" name="id_noticia" value='.$_GET['id'].'></br>';
+
+    if ($_SESSION['tipo_usuario'] == "1" OR "2")
+    {
+    $sql = "INSERT INTO comentarios (user_comentario,conteudo_comentario) VALUES ('$cr_user_comentario', '$cr_conteudo_comentario')";
+    }
+
     if($connect->query($sql) === TRUE) {
-        echo "<p>Comentário criado com sucesso!</p>";
-        echo "<a href='../create.php'><button type='button'>Voltar</button></a>";
-        echo "<a href='../index.php'><button type='button'>Início</button></a>";
+        header('Location: ../../ver_noticia.php?id='.$_GET['id_noticia'].'');
     } else {
         echo "Erro " . $sql . ' ' . $connect->connect_error;
     }

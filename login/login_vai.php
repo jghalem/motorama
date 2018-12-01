@@ -5,38 +5,38 @@ require "crud/db_connect.php";
 // Inicia sessões 
 session_start(); 
 
-// Recupera o login 
-$login = isset($_POST["login"]) ? addslashes(trim($_POST["login"])) : FALSE; 
+// Recupera o username 
+$username = isset($_POST["username"]) ? addslashes(trim($_POST["username"])) : FALSE; 
 // Recupera a senha, a criptografando em MD5 
 $senha = isset($_POST["senha"]) ? md5(trim($_POST["senha"])) : FALSE; 
 
-// Usuário não forneceu a senha ou o login 
-if(!$login ) 
+// Usuário não forneceu a senha ou o username 
+if(!$username) 
 { 
-echo "Você deve digitar sua senha e login!"; 
+echo "Você deve digitar sua senha e username!"; 
 exit; 
 } 
 
 /** 
 * Executa a consulta no banco de dados. 
-* Caso o número de linhas retornadas seja 1 o login é válido, 
+* Caso o número de linhas retornadas seja 1 o username é válido, 
 * caso 0, inválido. 
 */ 
-/*$SQL = "SELECT id_usuario, nome, login, senha, tipo_usuario, 
+$SQL = "SELECT id_usuario, nome, username, senha, tipo_usuario, 
 FROM usuarios 
-WHERE login = ".$login.""; */
+WHERE username = ".$username."";
 
 
 //$result_id = @mysql_query($SQL) or die("Erro no banco de dados!"); 
 //$total = @mysql_num_rows($result_id); 
 
-$res = $connect->query("SELECT * FROM usuarios WHERE login = '".$login."'");
+$res = $connect->query("SELECT * FROM usuarios WHERE username = '".$username."'");
 $row=$res->fetch_array();
 
 /*	
 echo $row['id']; 
 echo $row['nome']; 
-echo $row['login']; 
+echo $row['username']; 
 echo $row['senha']; 
 echo $row['postar']; 
 */
@@ -45,7 +45,7 @@ echo $row['postar'];
 //$row=$res->fetch_array();
 
 
-// Caso o usuário tenha digitado um login válido o número de linhas será 1.. 
+// Caso o usuário tenha digitado um username válido o número de linhas será 1.. 
 if($row) 
 { 
 // Obtém os dados do usuário, para poder verificar a senha e passar os demais dados para a sessão 
@@ -73,10 +73,10 @@ echo "Senha inválida!";
 exit; 
 } 
 } 
-// Login inválido 
+// username inválido 
 else 
 { 
-echo "O login fornecido por você é inexistente!"; 
+echo "O username fornecido por você é inexistente!"; 
 exit; 
 } 
 ?>
