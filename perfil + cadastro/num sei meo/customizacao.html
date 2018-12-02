@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Motorama</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Dicas de carros">
+    <meta name="author" content="nos">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="css/motorama.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <img class="ilogo" src="https://previews.123rf.com/images/uasumy/uasumy1709/uasumy170900023/86140858-letter-m-logo-modern-monogram-paper-ribbon-material-design-style-identity-initial-emblem-mockup-over.jpg" width="30" height="30" class="d-inline-block align-top" alt=""><font size="5px" face="Edwardian Script ITC" color="white">
+      | Motorama |</font>
+    </a>
+              
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+         </li>
+         <li class="nav-item">
+                <a class="nav-link" href="motoramaindex.html">Inicio</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="noticia.html">Notícias</a>
+          </li>
+          <li class="nav-item">
+           <a class="nav-link disabled" href="#">Customização</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Sobre</a>
+            </li>
+            </ul>
+            <!--https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=navbar-dropdown-login-and-signup-form-with-social-buttons-->
+            <form class="navbar-form form-inline">
+                <div class="input-group search-box">								
+                    <input type="text" id="search" class="form-control" placeholder="Procure aqui...">
+                    <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right ml-auto">			
+                <li class="nav-item">
+                    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Login</a>
+                    <ul class="dropdown-menu form-wrapper">					
+                        <li>
+                            <form action="/examples/actions/confirmation.php" method="post">
+                                <p class="hint-text">Logar com suas midias sociais</p>
+                                <div class="form-group social-btn clearfix">
+                                    <a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
+                                    <a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
+                                </div>
+                                <div class="or-seperator"><b>ou</b></div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Nome de usuário" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Senha" required="required">
+                                </div>
+                                <input type="submit" class="btn btn-primary btn-block" value="Login">
+                                <div class="form-footer">
+                                    <a href="#">Esqueceu sua senha?</a>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Cadastrar</a>
+                    <ul class="dropdown-menu form-wrapper">					
+                        <li>
+                            <form action="/examples/actions/confirmation.php" method="post">
+                                <p class="hint-text">Preencha esse formulario para criar sua conta!</p>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Nome de usuário" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Senha" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Confirme sua senha" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-inline"><input type="checkbox" required="required"> Eu aceito os <a href="#">termos &amp; Condições</a></label>
+                                </div>
+                                <input type="submit" class="btn btn-primary btn-block" value="Cadastrar">
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- <div id="wrap">
+                <form action="" autocomplete="on">
+                  <input id="search" name="search" type="text" placeholder="O que você está procurando?"><input id="search_submit" value="Rechercher" type="submit">
+                </form>
+              </div>-->
+</nav>
+</head>
+<body>
+
+
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+<!-- Indicators -->
+<ul class="carousel-indicators">
+  <li data-target="#demo" data-slide-to="0" class="active"></li>
+  <li data-target="#demo" data-slide-to="1"></li>
+  <li data-target="#demo" data-slide-to="2"></li>
+</ul>
+
+<!-- The slideshow -->
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img src="https://doutormultas.com.br/wp-content/uploads/2018/02/tuning-mercado-brasil.jpg" alt="assento" width="100%" height="auto">
+  </div>
+  <div class="carousel-item">
+    <img src="https://doutormultas.com.br/wp-content/uploads/2018/02/tuning-mercado-mundo-2018.jpg " alt="dianteira" width="100%" height="auto">
+  </div>
+  <div class="carousel-item">
+    <img src="https://doutormultas.com.br/wp-content/uploads/2018/02/tuning-como-fazer-dentro-da-lei.jpg " alt="mecanico" width="100%" height="auto">
+  </div>
+  <div class="carousel-item">
+    <img src="https://doutormultas.com.br/wp-content/uploads/2018/02/tuning-o-que-pode-nao-pode-customizar-veiculos.jpg " alt="rodas" width="100%" height="auto">
+  </div>
+</div>
+
+<!-- Left and right controls -->
+<a class="carousel-control-prev" href="#demo" data-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+</a>
+<a class="carousel-control-next" href="#demo" data-slide="next">
+  <span class="carousel-control-next-icon"></span>
+</a>
+</div>
+
+
+
+<br><br><br>
+     
+     <h2 style="text-align:center">Mercado de tunning no Brasil </h2><br>
+     
+     <style>
+         div.a {
+             text-indent: 30px;
+         }  
+         </style>
+     
+         <div class="a">
+     <p> Podemos dizer que o mercado era bastante tímido até chegar por aqui o primeiro dos filmes da franquia Velozes e Furiosos, no início dos anos 2000.
+     
+               A partir dali, a atividade não ficou mais restritas a poucos aficionados.
+               
+               Tanto é assim que, a cada ano, uma quantia enorme de dinheiro é movimentada pelo mercado de tunning no país.
+               
+               Você saberia dizer quanto?
+               
+               Veja o que diz este site:
+               
+               “Segundo organizadores do AutoEsporte ExpoShow, evento realizado em São Paulo, o mercado do tunning movimenta cerca de R$ 8 bilhões por ano no país”.
+               
+               Ou seja, é um valor altíssimo que gira todos os anos exclusivamente relacionado ao tunning no Brasil.
+               
+               E isso inclui todos os tipos de personalizações possíveis.
+               
+               Podemos dizer que, se você quer deixar um carro, moto ou caminhão com a sua cara, mostrando toda a sua personalidade, é plenamente possível.
+               
+               Basta imaginar e ter capacidade de realizar.
+               
+               O mercado de tunning brasileiro oferece possibilidades a tudo que você sonhar fazer.
+               
+               Hoje em dia, é possível até mesmo fazer réplicas de carros famosos.
+               
+               Já pensou?
+               
+               No tunning, o limite é a imaginação, o dinheiro e as leis.
+               
+               Afinal, é importante fazer tudo de acordo com as regras.
+               
+               Isso evita dois grandes prejuízos.
+               
+               O primeiro seria a multa, é claro.
+               
+               O segundo, por vezes muito mais grave, é ter que gastar para desfazer tudo o que foi realizado em termos de personalização.
+               
+               Sim, é isso mesmo.
+               
+               Dependendo das modificações, será preciso devolver o veículo às suas características originais.
+               
+               Já pensou em quanto dinheiro jogado fora isso representa?
+               
+               Então, para contribuir com os números do tunning no país, é vital conhecer as regras do jogo.
+               
+               Mas, antes, vamos ver como anda a atividade no exterior.
+     
+           </p>
+           </div>
+     <br>
+        <h3 style="text-align:center">Mercado de tunning no Mundo </h3>   
+        <style>
+           div.a {
+               text-indent: 30px;
+           }  
+           </style>
+       
+           <div class="a">
+     <p> Os tipos de tunning mudam de país para país.
+     
+         Toda essa variação se explica muito em razão das legislações de cada lugar.
+         
+         Nos Estados Unidos, por exemplo, é muito comum ver carros com rodas gigantes, ou motos com o garfo alongado.
+         
+         Com certeza, você já viu em algum filme uma moto com um garfo super longo, não viu?
+         
+         Certamente, esse filme era americano.
+         
+         Na Alemanha, a preferência é dada para a mecânica, mais do que pela estética.
+         
+         Como lá não existe a mesma restrição que experimentamos por aqui, os motores sofrem modificações muito maiores.
+         
+         Assim, nascem verdadeiras máquinas de velocidade.
+         
+         E os exemplos não param por aí.
+         
+         Na França, país das artes, o grande foco está nas pinturas automotivas.
+         
+         Muitas delas são feitas até mesmo por artistas de verdade, dando origem a belíssimas obras gráficas.
+         
+         Não há como existirem dois carros com a mesma personalização.
+         
+         Mais pessoal impossível.
+         
+         Agora, vamos sair da Europa para a Ásia.
+         
+         No Japão, também é comum a mistura de motores potentes com pinturas especiais.
+         
+         Muitos brasileiros que moram lá acabam fazendo carros incríveis.
+         
+         Afinal, tecnologia de ponta, alto poder aquisitivo e leis mais permissivas ao tunning ajudam a criatividade a alcançar as alturas.
+         
+     </p>
+     </div>
+     <br>
+     
+     <h3 style="text-align:center">Até que ponto posso customizar?</h3>
+     <style>
+         div.a {
+             text-indent: 30px;
+         }  
+         </style>
+     
+         <div class="a">
+     
+     <p>
+         Personalizar veículos é um hobby em todo o mundo.
+     
+         Mas para o seu azar, aqui no Brasil, as regras são mais severas, o que acaba restringindo bastante a liberdade de criar.
+         
+         Assim, muitas são as dúvidas quando se fala do que pode e o que não pode fazer no quesito tunning.
+         
+         Para esclarecer, vamos primeiro falar do rebaixamento de veículos.
+       </div>
+         
+       <br><br>
+         <h3 style="text-align:center">Pode rebaixar carros?</h3>
+         <style>
+             div.a {
+                 text-indent: 30px;
+             }  
+             </style>
+         
+             <div class="a">
+         Como já alertado, a sua capacidade criativa esbarra na lei.
+         
+         Então, nada mais justo do que saber o que ela prevê.
+         
+         Quanto a carros rebaixados, é preciso observar a Resolução 479/2014, publicada pelo Contran, o Conselho Nacional de Trânsito.
+         
+         Veja um trecho importante dela:
+         </div>
+         <br><br>
+         
+         <style>
+             div.a {
+                 text-indent: 30px;
+             }  
+             </style>
+         
+             <div class="a">
+        <p> <b>
+          “Art. 6º Os veículos de passageiros e de cargas, exceto veículos de duas ou três rodas e quadriciclos, usados, que sofrerem alterações no sistema de suspensão, ficam obrigados a atender aos limites e exigências previstos nesta Resolução, cabendo a cada entidade executora das modificações e ao proprietário do veículo a responsabilidade pelo atendimento às exigências em vigor.
+         
+         §1º Nos veículos com PBT até 3500 kg:
+         
+         I – o sistema de suspensão poderá ser fixo ou regulável.
+         
+         II – A altura mínima permitida para circulação deve ser maior ou igual a 100 mm, medidos verticalmente do solo ao ponto mais baixo da carroceria ou chassi, conforme anexo I.
+         
+         III – O conjunto de rodas e pneus não poderá tocar em parte alguma do veículo quando submetido ao teste de esterçamento.
+        </p>
+        <p> 
+         §2º Nos veículos com PBT acima de 3.500 kg:
+         
+         I – em qualquer condição de operação, o nivelamento da longarina não deve ultrapassar dois graus a partir de uma linha horizontal.
+         
+         II – A verificação do cumprimento do disposto no inciso I será feita conforme o Anexo I.
+         
+         III – As dimensões de intercambiabilidade entre o caminhão trator e o rebocado devem respeitar a norma NBR NM – ISO 1726.
+         
+         IV – É vedada a alteração na suspensão dianteira, exceto para instalação do sistema de tração e para incluir ou excluir eixo auxiliar, direcional ou autodirecional.
+         </p>
+         
+         <p> §3º Os veículos que tiverem sua suspensão modificada, em qualquer condição de uso, deverão inserir no campo das observações do Certificado de Registro de Veículo – CRV e do Certificado de Registro e Licenciamento de Veículo – CRLV a altura livre do solo.”</b> </p></div>
+         <br>
+     
+         <style>
+             div.a {
+                 text-indent: 60px;
+             }  
+             </style>
+         
+             <div class="a">
+               Como você pode ver, a suspensão pode tanto ser fixa quanto regulável.
+         
+         A altura mínima da parte que estiver mais próxima do chão é de 10 centímetros.
+         
+         E as rodas e pneus não podem tocar em nenhuma parte do carro quando submetidos ao teste do esterçamento.
+         
+         O mesmo vale se você quiser aumentar o aro da roda do seu carro.
+         
+         Ela não poderá tocar em nenhuma parte do carro.
+         
+         Imagine que você está dirigindo, vai fazer uma curva, e não consegue porque a roda trancou na lataria.
+         
+         É esse tipo de situação que a legislação tenta evitar.
+         
+         Pode customizar rodas e pneus?
+         Existe ainda outra regra para customização de rodas e pneus.
+         
+         Ela está no artigo 8 da Resolução nº 292/2008, também publicada pelo Contran.
+         
+         Basicamente, o texto proíbe que pneus e rodas passem dos limites externos dos pára-lamas.
+         
+         Ou seja, se você for trocar eles, terá que observar isso também.
+         
+         Olho na multa pela alteração de característica
+         Se você não respeitar o disposto até aqui, sobre rebaixar o carro ou customizar rodas e pneus, estará sujeito à multa.
+         
+         E ela está descrita no mesmo artigo do Código de Trânsito Brasileiro (CTB).
+       </div><br>
+         
+       <style>
+           div.a {
+               text-indent: 30px;
+           }  
+           </style>
+       
+           <div class="a">
+             
+             Confira só:<br><br>
+         
+        <P> <b>“Art. 230. Conduzir o veículo:
+         
+         <p>(…)</p>
+         
+         <p>II – com a cor ou característica alterada;</p>
+         
+         <p>Infração – grave;</p>
+         
+         <p> Penalidade – multa;</p>
+         
+        <p> Medida administrativa – retenção do veículo para regularização”.</b></p><br><br>
+         
+         <style>
+                div.a {
+                    text-indent: 30px;
+                }  
+                </style>
+            
+                <div class="a">
+         <p>Ou seja, se você for pego dirigindo um carro rebaixado sem regularização estará cometendo uma infração grave.
+         
+         Em razão disso, terá que pagar uma multa de R$ 195,23, receberá 5 pontos na carteira de habilitação (CNH) e o veículo ficará retido até a regularização.
+         
+         Nesse caso, você receberá um documento informando a data limite para fazer a alteração e será liberado.
+         
+         Contudo, a liberação não o isentará da multa, nem dos pontos na CNH.
+         
+         O mesmo se aplica se, ao ser abordado pelo agente de trânsito, ele identificar irregularidades nas rodas ou aros.
+            </p>
+        </p>
+     </div>
+     <br><br><br>
+      
+     <h3 style="text-align:center">Regularização do veículo</h3>
+     <br>
+     <style>
+            div.a {
+                text-indent: 30px;
+            }  
+            </style>
+        
+            <div class="a">
+     Regularizar um veículo com tunning não é nenhuma tarefa de outro mundo.
+
+     Primeiro, você terá que abrir um processo junto ao Detran.
+     
+     A dica é você abrir um processo para o máximo de modificações possíveis que pretende fazer.
+     
+     Mas por que isso?
+     
+     Porque cada vez que você abrir esse processo terá que pagar uma taxa.
+     
+     Ou seja, se abrir o processo menos vezes, terá que pagar menos taxas.
+     
+     Já se fizer isso a cada nova alteração, terá um custo extra só pagando taxas.
+    <br><br>   
+    </div>
+        
+
+     
+        <style>
+                div.a {
+                    text-indent: 30px;
+                }  
+                </style>
+            
+                <div class="a">
+     <p>1. Apresente seu projeto ao Detran
+     Lembre-se do que falamos sobre o que é permitido ou não.
+
+     
+     Só depois solicite as modificações para deixar o seu carro do jeito que você tanto almeja.
+     
+     Como falamos antes, não faça as alterações antes da abertura do processo.
+     
+     Se você fizer isso, corre o risco do Detran não liberar alguma alteração e você ter que pagar tudo de novo para desfazer ela.
+     </p>
+
+     <p>2. Pague a guia
+     Solicitada a abertura do processo junto ao Detran do seu estado, será emitida uma guia de pagamento.
+     
+     Pague ela em um dos bancos conveniados.
+     
+     Dica: informe-se junto ao Detran se pagando em alguns dos bancos específicos o processo é mais rápido.
+     
+     Essa opção é muito válida caso você queira começar logo a customização do seu veículo.
+     </p>
+
+     <p>3. Faça uma avaliação prévia
+     Com a guia paga, você terá que apresentar seu veículo e os documentos do carro para que seja feita uma avaliação prévia pelo Detran.
+     
+     Nessa avaliação, os técnicos do órgão irão verificar se as modificações solicitadas irão prejudicar o veículo de alguma forma, ou a sua segurança e a de outras pessoas.
+     
+     Após essa primeira avaliação, será informado o que pode e o que não pode ser feito dentro das modificações solicitadas no seu projeto.
+     
+     Caso você siga as dicas que apresentamos antes, a tendência é que todas as alterações sejam liberadas para legalização.
+     
+     Depois disso, o Detran irá liberar uma autorização com as modificações liberadas.
+     
+     Recorra sua multa de trânsito
+     Baixe o PDF grátis
+     </p>
+     
+     
+     <p>4. Realize as mudanças
+     Como próxima etapa, você já pode levar seu veículo a um profissional especializado, que irá fazer o serviço.
+     
+     Lembre-se de verificar as referências do profissional antes de fazer o serviço.
+     </p>
+
+
+     <p>5. Passe pela inspeção
+     Após realizadas as alterações, você terá que levar seu veículo em uma oficina credenciada pelo Instituto Nacional de Metrologia, Qualidade e Tecnologia (Inmetro), para que seu veículo seja inspecionado.
+     
+     Caso esteja tudo de acordo com as normas e o nos padrões de segurança necessários, você poderá seguir para o passo seguinte.
+     
+     Caso contrário, terá que retornar ao profissional que fez as modificações e refazer o serviço, realizando os ajustes.
+     
+     </p>
+
+
+     <p>6. Retorne ao Detran
+     Após obter a aprovação do Inmetro você deve retornar ao Detran e solicitar o Certificado de Segurança Veicular (CSV).
+     
+     Esse documento vai garantir que você não receba multas pelas modificações.
+     
+     O CSV ficará registrado como uma observação no Certificado de Registro do Veículo (CRV) e Certificado de Registro de Licenciamento de Veículos (CRLV).
+     
+     Ou seja, ambos serão emitidos novamente, agora constando o CSV.
+     </p>
+
+     <p>7. Aproveite seu tunning
+     Tendo os documentos, você pode transitar normalmente com seu carro modificado sem se preocupar em receber multas ou ter ele apreendido.
+     </p>
+
+    </div>
+     </p>
+    
+           </div>
+
+<br><br><br><br><br><br><br><br>
+          
+
+
+                    
+                    
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</body>
+<footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <h2 class="logo"><img class="ilogo" src="https://previews.123rf.com/images/uasumy/uasumy1709/uasumy170900023/86140858-letter-m-logo-modern-monogram-paper-ribbon-material-design-style-identity-initial-emblem-mockup-over.jpg" width="100" height="100"></h2>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2">
+                    <h5>Começo</h5>
+                    <ul>
+                        <li><a href="motoramaindex.html">Inicio</a></li>
+                        <li><a href="#">Cadastrar</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2">
+                    <h5>Sobre Nós</h5>
+                    <ul>
+                        <li><a href="#">Informação do Site</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2">
+                   <!-- <h5>Suporte</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Forums</a></li>
+                    </ul>-->
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="social-networks">
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+                    </div>
+                    <!--<a href="fale.html">
+                    <button href="fale.html" type="button" class="btn btn-default botao">Fale Conosco</button></a>-->
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>©2018 Motorama, Inc. Todos Direitos Reservados.</p>
+        </div>
+    </footer>
+</html>
