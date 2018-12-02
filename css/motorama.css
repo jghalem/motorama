@@ -1,3 +1,7 @@
+body, html {
+    height: 100%;
+}
+
 body{
     width:100%;
     background-color: #000;
@@ -25,12 +29,17 @@ body{
     text-decoration: none
 }
 
+/**.parallax_noti{
+    filter: blur(20px);
+      
+}**/
+
 .parallax {
     /* The image used */
     background-image: url("https://images7.alphacoders.com/768/768984.jpg");
 
     /* Set a specific height */
-    min-height: 750px; 
+    min-height: 99%; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -39,9 +48,9 @@ body{
     background-size: cover;
 }
 
-.parallax_noti{
+/*.parallax_noti{
         background-image: url("https://images6.alphacoders.com/592/592348.jpg");
-}
+}*/
 
 .caption span.notiti{
     font-size: 50px;
@@ -51,6 +60,181 @@ body{
     border-bottom:1px solid white;
 }
 
+.notibody{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+@media screen and (max-width: 360px){
+    .notibody{
+        margin-top: 10%;
+    }
+}
+
+.cad{
+    margin:0 auto;
+    background-color: white;
+    width: 480px;
+    margin-bottom: 15%;
+    padding: 5%;
+    border-radius: 10px;
+    background-image: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    
+}
+
+#notfound {
+    position: relative;
+    height: 100vh;
+    background: #030005;
+  }
+  
+  #notfound .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  
+  .notfound {
+    max-width: 767px;
+    width: 98%;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  .notfound .notfound-404 {
+    position: relative;
+    height: 180px;
+    margin-bottom: 20px;
+    z-index: -1;
+  }
+  
+  .notfound .notfound-404 h1 {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50% , -50%);
+        -ms-transform: translate(-50% , -50%);
+            transform: translate(-50% , -50%);
+    font-size: 224px;
+    font-weight: 900;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: -12px;
+    color: #030005;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0px #8400ff, 1px 1px 0px #ff005a;
+    letter-spacing: -20px;
+  }
+  
+  
+  .notfound .notfound-404 h2 {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 110px;
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 0px #8400ff;
+    letter-spacing: 13px;
+    margin: 0;
+  }
+
+  .notfound .notfound-404 h5 {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 240px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 0px #8400ff;
+    letter-spacing: 13px;
+    margin: 0;
+    width:98%;
+}
+
+@media screen and (max-width: 430px){
+    .notfound .notfound-404 h5{
+        font-size: 10px;
+    }
+}
+  
+  .notfound a {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #ff005a;
+    text-decoration: none;
+    border: 2px solid;
+    background: transparent;
+    padding: 10px 40px;
+    font-size: 14px;
+    font-weight: 700;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    margin-top:20%;
+  }
+
+  @media screen and (max-width: 430px){
+    .notfound a{
+        margin-top:50%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .notfound a{
+        margin-top:80%;
+    }
+}
+  
+  .notfound a:hover {
+    color: #8400ff;
+  }
+  
+  @media only screen and (max-width: 767px) {
+      .notfound .notfound-404 h2 {
+          font-size: 24px;
+      }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .notfound .notfound-404 h1 {
+        font-size: 182px;
+    }
+  }
+  
+
+@media screen and (max-width: 430px){
+    .cad{
+        width:300px;
+    }
+}
+
+
+.cadbackimg{
+    background-image: url("https://images7.alphacoders.com/768/768984.jpg");
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .caption1 span.notides{
     margim-top:50%;
@@ -84,6 +268,17 @@ body{
 
 .botao:hover{
     background-color: #08088A;
+}
+
+.jogo{
+    width: 98%;
+    height: auto;
+    margin-bottom: 5%;
+}
+
+.textoo{
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .caption span.border {
