@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2018 at 08:03 PM
+-- Generation Time: Dec 02, 2018 at 02:36 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -23,30 +23,51 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `comentarios`
+--
+
+CREATE TABLE `comentarios` (
+  `id_comentario` int(11) NOT NULL,
+  `user_comentario` int(11) NOT NULL,
+  `conteudo_comentario` varchar(200) NOT NULL,
+  `data_comentario` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `comentarios`
+--
+
+INSERT INTO `comentarios` (`id_comentario`, `user_comentario`, `conteudo_comentario`, `data_comentario`) VALUES
+(102, 2, 'coe kkkkkkkkkkkkk', '2018-12-01 20:55:34');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `noticias`
 --
 
 CREATE TABLE `noticias` (
   `id_noticia` int(11) NOT NULL,
-  `titulo` varchar(45) NOT NULL,
-  `par1` varchar(45) NOT NULL,
+  `titulo` varchar(100) NOT NULL,
+  `par1` varchar(1000) NOT NULL,
   `img1` varchar(1000) NOT NULL,
-  `par2` varchar(45) DEFAULT NULL,
+  `par2` varchar(1000) DEFAULT NULL,
   `img2` varchar(1000) DEFAULT NULL,
-  `par3` varchar(45) DEFAULT NULL,
+  `par3` varchar(1000) DEFAULT NULL,
   `img3` varchar(1000) DEFAULT NULL,
-  `par4` varchar(45) DEFAULT NULL,
+  `par4` varchar(1000) DEFAULT NULL,
   `img4` varchar(1000) DEFAULT NULL,
   `data` datetime DEFAULT CURRENT_TIMESTAMP,
-  `original_poster` int(11) DEFAULT NULL
+  `original_poster` int(11) DEFAULT NULL,
+  `comentarios` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `noticias`
 --
 
-INSERT INTO `noticias` (`id_noticia`, `titulo`, `par1`, `img1`, `par2`, `img2`, `par3`, `img3`, `par4`, `img4`, `data`, `original_poster`) VALUES
-(1, 'era uma vez', 'kkkk', 'coe.png', NULL, NULL, NULL, NULL, NULL, NULL, '2018-11-30 16:59:49', 1);
+INSERT INTO `noticias` (`id_noticia`, `titulo`, `par1`, `img1`, `par2`, `img2`, `par3`, `img3`, `par4`, `img4`, `data`, `original_poster`, `comentarios`) VALUES
+(6, 'hmhm', 'rsrs', 'hehe.gif', 'oie', 'coe salve', '', '', '', '', '2018-12-01 15:28:22', 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -64,8 +85,8 @@ CREATE TABLE `tipo_usuario` (
 --
 
 INSERT INTO `tipo_usuario` (`id_tipo_usuario`, `nome`) VALUES
-(1, 'administrador'),
-(2, 'comum');
+(1, 'admin'),
+(2, 'user');
 
 -- --------------------------------------------------------
 
@@ -76,7 +97,7 @@ INSERT INTO `tipo_usuario` (`id_tipo_usuario`, `nome`) VALUES
 CREATE TABLE `usuarios` (
   `id_usuario` int(11) NOT NULL,
   `nome` varchar(45) NOT NULL,
-  `login` varchar(45) NOT NULL,
+  `username` varchar(45) NOT NULL,
   `senha` varchar(45) NOT NULL,
   `data_nasc` datetime DEFAULT NULL,
   `data_conta` datetime DEFAULT CURRENT_TIMESTAMP,
@@ -87,19 +108,28 @@ CREATE TABLE `usuarios` (
 -- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nome`, `login`, `senha`, `data_nasc`, `data_conta`, `tipo_usuario`) VALUES
-(1, 'joao', 'joaozika', '81dc9bdb52d04dc20036dbd8313ed055', '2018-11-15 00:00:00', '2018-11-30 16:54:19', 1);
+INSERT INTO `usuarios` (`id_usuario`, `nome`, `username`, `senha`, `data_nasc`, `data_conta`, `tipo_usuario`) VALUES
+(1, 'joao', 'joao', '81dc9bdb52d04dc20036dbd8313ed055', '2018-11-15 00:00:00', '2018-11-30 16:54:19', 2),
+(2, 'administrador', 'admin', '21232f297a57a5a743894a0e4a801fc3', '2018-11-15 00:00:00', '2018-11-30 20:59:30', 1);
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD PRIMARY KEY (`id_comentario`),
+  ADD KEY `user_comentario` (`user_comentario`);
+
+--
 -- Indexes for table `noticias`
 --
 ALTER TABLE `noticias`
   ADD PRIMARY KEY (`id_noticia`),
-  ADD KEY `fk_noticias_usuarios1_idx` (`original_poster`);
+  ADD KEY `fk_noticias_usuarios1_idx` (`original_poster`),
+  ADD KEY `comentarios` (`comentarios`);
 
 --
 -- Indexes for table `tipo_usuario`
@@ -119,10 +149,15 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT for table `comentarios`
+--
+ALTER TABLE `comentarios`
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+--
 -- AUTO_INCREMENT for table `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id_noticia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_noticia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tipo_usuario`
 --
@@ -132,16 +167,23 @@ ALTER TABLE `tipo_usuario`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --
 
 --
+-- Constraints for table `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD CONSTRAINT `comentarios_ibfk_1` FOREIGN KEY (`user_comentario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
 -- Constraints for table `noticias`
 --
 ALTER TABLE `noticias`
-  ADD CONSTRAINT `noticias_ibfk_1` FOREIGN KEY (`original_poster`) REFERENCES `usuarios` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `noticias_ibfk_1` FOREIGN KEY (`original_poster`) REFERENCES `usuarios` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `noticias_ibfk_2` FOREIGN KEY (`comentarios`) REFERENCES `comentarios` (`id_comentario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `usuarios`
