@@ -275,6 +275,13 @@ body{
     height: auto;
     margin-bottom: 5%;
 }
+/*matheus pag*/
+.a{
+    background-color: #000;
+    color:white;
+    padding:5%;
+    margin-top: 5%;
+}
 
 .textoo{
     text-align: justify;

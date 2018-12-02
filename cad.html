@@ -14,96 +14,95 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-</head>
-<body>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <img class="ilogo" src="https://previews.123rf.com/images/uasumy/uasumy1709/uasumy170900023/86140858-letter-m-logo-modern-monogram-paper-ribbon-material-design-style-identity-initial-emblem-mockup-over.jpg" width="30" height="30" class="d-inline-block align-top" alt=""><font size="5px" face="Edwardian Script ITC" color="white">
-                  | Motorama |</font>
-                </a>
-                          
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                  <li class="nav-item active">
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <img class="ilogo" src="https://previews.123rf.com/images/uasumy/uasumy1709/uasumy170900023/86140858-letter-m-logo-modern-monogram-paper-ribbon-material-design-style-identity-initial-emblem-mockup-over.jpg" width="30" height="30" class="d-inline-block align-top" alt=""><font size="5px" face="Edwardian Script ITC" color="white">
+          | Motorama |</font>
+        </a>
+                  
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="noticia.html">Notícias</a>
+              </li>
+              <li class="nav-item">
+               <a class="nav-link disabled" href="Customizacao.html">Customização</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="sobre.html">Sobre</a>
+                </li>
+                </ul>
+                <!--https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=navbar-dropdown-login-and-signup-form-with-social-buttons-->
+                <form class="navbar-form form-inline">
+                    <div class="input-group search-box">								
+                        <input type="text" id="search" class="form-control" placeholder="Procure aqui...">
+                        <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav navbar-right ml-auto">			
+                    <li class="nav-item">
+                        <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Login</a>
+                        <ul class="dropdown-menu form-wrapper">					
+                            <li>
+                                <form action="/examples/actions/confirmation.php" method="post">
+                                    <p class="hint-text">Logar com suas midias sociais</p>
+                                    <div class="form-group social-btn clearfix">
+                                        <a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
+                                        <a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
+                                    </div>
+                                    <div class="or-seperator"><b>ou</b></div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Nome de usuário" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Senha" required="required">
+                                    </div>
+                                    <input type="submit" class="btn btn-primary btn-block" value="Login">
+                                    <div class="form-footer">
+                                        <a href="#">Esqueceu sua senha?</a>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="noticia.html">Notícias</a>
-                      </li>
-                      <li class="nav-item">
-                       <a class="nav-link disabled" href="#">Customização</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link disabled" href="sobre.html">Sobre</a>
-                        </li>
-                        </ul>
-                        <!--https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=navbar-dropdown-login-and-signup-form-with-social-buttons-->
-                        <form class="navbar-form form-inline">
-                            <div class="input-group search-box">								
-                                <input type="text" id="search" class="form-control" placeholder="Procure aqui...">
-                                <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
-                            </div>
-                        </form>
-                        <ul class="nav navbar-nav navbar-right ml-auto">			
-                            <li class="nav-item">
-                                <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Login</a>
-                                <ul class="dropdown-menu form-wrapper">					
-                                    <li>
-                                        <form action="/examples/actions/confirmation.php" method="post">
-                                            <p class="hint-text">Logar com suas midias sociais</p>
-                                            <div class="form-group social-btn clearfix">
-                                                <a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
-                                                <a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
-                                            </div>
-                                            <div class="or-seperator"><b>ou</b></div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Nome de usuário" required="required">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" class="form-control" placeholder="Senha" required="required">
-                                            </div>
-                                            <input type="submit" class="btn btn-primary btn-block" value="Login">
-                                            <div class="form-footer">
-                                                <a href="#">Esqueceu sua senha?</a>
-                                            </div>
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Cadastrar</a>
-                                <ul class="dropdown-menu form-wrapper">					
-                                    <li>
-                                        <form action="/examples/actions/confirmation.php" method="post">
-                                            <p class="hint-text">Preencha esse formulario para criar sua conta!</p>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Nome de usuário" required="required">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" class="form-control" placeholder="Senha" required="required">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" class="form-control" placeholder="Confirme sua senha" required="required">
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="checkbox-inline"><input type="checkbox" required="required"> Eu aceito os <a href="#">termos &amp; Condições</a></label>
-                                            </div>
-                                            <input type="submit" class="btn btn-primary btn-block" value="Cadastrar">
-                                        </form>
-                                    </li>
-                                </ul>
+                    <li class="nav-item">
+                        <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Cadastrar</a>
+                        <ul class="dropdown-menu form-wrapper">					
+                            <li>
+                                <form action="/examples/actions/confirmation.php" method="post">
+                                    <p class="hint-text">Preencha esse formulario para criar sua conta!</p>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Nome de usuário" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Senha" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Confirme sua senha" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="checkbox-inline"><input type="checkbox" required="required"> Eu aceito os <a href="#">termos &amp; Condições</a></label>
+                                    </div>
+                                    <input type="submit" class="btn btn-primary btn-block" value="Cadastrar">
+                                </form>
                             </li>
                         </ul>
-                        <!-- <div id="wrap">
-                            <form action="" autocomplete="on">
-                              <input id="search" name="search" type="text" placeholder="O que você está procurando?"><input id="search_submit" value="Rechercher" type="submit">
-                            </form>
-                          </div>-->
-            </nav>
+                    </li>
+                </ul>
+                <!-- <div id="wrap">
+                    <form action="" autocomplete="on">
+                      <input id="search" name="search" type="text" placeholder="O que você está procurando?"><input id="search_submit" value="Rechercher" type="submit">
+                    </form>
+                  </div>-->
+    </nav>
 </head>
 <body>
 <div class="cadbackimg"></div>  
@@ -136,44 +135,44 @@
 
 </body>
 <footer id="myFooter">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <h2 class="logo"><img class="ilogo" src="https://previews.123rf.com/images/uasumy/uasumy1709/uasumy170900023/86140858-letter-m-logo-modern-monogram-paper-ribbon-material-design-style-identity-initial-emblem-mockup-over.jpg" width="100" height="100"></h2>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-2">
-                <h5>Começo</h5>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="cad.html">Cadastrar</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-2">
-                <h5>Sobre Nós</h5>
-                <ul>
-                    <li><a href="#">Informação do Site</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-2">
-               <!-- <h5>Suporte</h5>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Forums</a></li>
-                </ul>-->
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="social-networks">
-                    <a href="erro.html" class="twitter"><i class="fa fa-twitter"></i></a>
-                    <a href="erro.html" class="facebook"><i class="fa fa-facebook"></i></a>
-                    <a href="erro.html" class="youtube"><i class="fa fa-youtube"></i></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <h2 class="logo"><img class="ilogo" src="https://previews.123rf.com/images/uasumy/uasumy1709/uasumy170900023/86140858-letter-m-logo-modern-monogram-paper-ribbon-material-design-style-identity-initial-emblem-mockup-over.jpg" width="100" height="100"></h2>
                 </div>
-                <!--<a href="fale.html">
-                <button href="fale.html" type="button" class="btn btn-default botao">Fale Conosco</button></a>-->
+                <div class="col-sm-12 col-md-6 col-lg-2">
+                    <h5>Começo</h5>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="cad.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2">
+                    <h5>Peças</h5>
+                    <ul>
+                        <li><a href="https://www.tuningparts.com.br/">Compre peças</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2">
+                   <!-- <h5>Suporte</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Forums</a></li>
+                    </ul>-->
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="social-networks">
+                        <a href="erro.html" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="erro.html" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="erro.html" class="youtube"><i class="fa fa-youtube"></i></a>
+                    </div>
+                    <!--<a href="fale.html">
+                    <button href="fale.html" type="button" class="btn btn-default botao">Fale Conosco</button></a>-->
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-copyright">
-        <p>©2018 Motorama, Inc. Todos Direitos Reservados.</p>
-    </div>
-</footer>
+        <div class="footer-copyright">
+            <p>©2018 Motorama, Inc. Todos Direitos Reservados.</p>
+        </div>
+    </footer>
 </html>

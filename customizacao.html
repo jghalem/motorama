@@ -13,100 +13,97 @@
     <link href="css/motorama.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
-</head>
-<body>
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <img class="ilogo" src="https://previews.123rf.com/images/uasumy/uasumy1709/uasumy170900023/86140858-letter-m-logo-modern-monogram-paper-ribbon-material-design-style-identity-initial-emblem-mockup-over.jpg" width="30" height="30" class="d-inline-block align-top" alt=""><font size="5px" face="Edwardian Script ITC" color="white">
-      | Motorama |</font>
-    </a>
-              
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-         </li>
-         <li class="nav-item">
-                <a class="nav-link" href="motoramaindex.html">Inicio</a>
-        </li>
-         <li class="nav-item">
-            <a class="nav-link" href="noticia.html">Notícias</a>
-          </li>
-          <li class="nav-item">
-           <a class="nav-link disabled" href="#">Customização</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Sobre</a>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <img class="ilogo" src="https://previews.123rf.com/images/uasumy/uasumy1709/uasumy170900023/86140858-letter-m-logo-modern-monogram-paper-ribbon-material-design-style-identity-initial-emblem-mockup-over.jpg" width="30" height="30" class="d-inline-block align-top" alt=""><font size="5px" face="Edwardian Script ITC" color="white">
+          | Motorama |</font>
+        </a>
+                  
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
             </li>
-            </ul>
-            <!--https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=navbar-dropdown-login-and-signup-form-with-social-buttons-->
-            <form class="navbar-form form-inline">
-                <div class="input-group search-box">								
-                    <input type="text" id="search" class="form-control" placeholder="Procure aqui...">
-                    <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
-                </div>
-            </form>
-            <ul class="nav navbar-nav navbar-right ml-auto">			
-                <li class="nav-item">
-                    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Login</a>
-                    <ul class="dropdown-menu form-wrapper">					
-                        <li>
-                            <form action="/examples/actions/confirmation.php" method="post">
-                                <p class="hint-text">Logar com suas midias sociais</p>
-                                <div class="form-group social-btn clearfix">
-                                    <a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
-                                    <a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
-                                </div>
-                                <div class="or-seperator"><b>ou</b></div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Nome de usuário" required="required">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Senha" required="required">
-                                </div>
-                                <input type="submit" class="btn btn-primary btn-block" value="Login">
-                                <div class="form-footer">
-                                    <a href="#">Esqueceu sua senha?</a>
-                                </div>
-                            </form>
-                        </li>
-                    </ul>
+             <li class="nav-item">
+                <a class="nav-link" href="noticia.html">Notícias</a>
+              </li>
+              <li class="nav-item">
+               <a class="nav-link disabled" href="Customizacao.html">Customização</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="sobre.html">Sobre</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Cadastrar</a>
-                    <ul class="dropdown-menu form-wrapper">					
-                        <li>
-                            <form action="/examples/actions/confirmation.php" method="post">
-                                <p class="hint-text">Preencha esse formulario para criar sua conta!</p>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Nome de usuário" required="required">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Senha" required="required">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Confirme sua senha" required="required">
-                                </div>
-                                <div class="form-group">
-                                    <label class="checkbox-inline"><input type="checkbox" required="required"> Eu aceito os <a href="#">termos &amp; Condições</a></label>
-                                </div>
-                                <input type="submit" class="btn btn-primary btn-block" value="Cadastrar">
-                            </form>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- <div id="wrap">
-                <form action="" autocomplete="on">
-                  <input id="search" name="search" type="text" placeholder="O que você está procurando?"><input id="search_submit" value="Rechercher" type="submit">
+                </ul>
+                <!--https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=navbar-dropdown-login-and-signup-form-with-social-buttons-->
+                <form class="navbar-form form-inline">
+                    <div class="input-group search-box">								
+                        <input type="text" id="search" class="form-control" placeholder="Procure aqui...">
+                        <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+                    </div>
                 </form>
-              </div>-->
-</nav>
+                <ul class="nav navbar-nav navbar-right ml-auto">			
+                    <li class="nav-item">
+                        <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Login</a>
+                        <ul class="dropdown-menu form-wrapper">					
+                            <li>
+                                <form action="/examples/actions/confirmation.php" method="post">
+                                    <p class="hint-text">Logar com suas midias sociais</p>
+                                    <div class="form-group social-btn clearfix">
+                                        <a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
+                                        <a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
+                                    </div>
+                                    <div class="or-seperator"><b>ou</b></div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Nome de usuário" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Senha" required="required">
+                                    </div>
+                                    <input type="submit" class="btn btn-primary btn-block" value="Login">
+                                    <div class="form-footer">
+                                        <a href="#">Esqueceu sua senha?</a>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Cadastrar</a>
+                        <ul class="dropdown-menu form-wrapper">					
+                            <li>
+                                <form action="/examples/actions/confirmation.php" method="post">
+                                    <p class="hint-text">Preencha esse formulario para criar sua conta!</p>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Nome de usuário" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Senha" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Confirme sua senha" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="checkbox-inline"><input type="checkbox" required="required"> Eu aceito os <a href="#">termos &amp; Condições</a></label>
+                                    </div>
+                                    <input type="submit" class="btn btn-primary btn-block" value="Cadastrar">
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- <div id="wrap">
+                    <form action="" autocomplete="on">
+                      <input id="search" name="search" type="text" placeholder="O que você está procurando?"><input id="search_submit" value="Rechercher" type="submit">
+                    </form>
+                  </div>-->
+    </nav>
 </head>
-<body>
+<body style="background-color: black;color:white;">
 
 
         <div id="demo" class="carousel slide" data-ride="carousel">
@@ -116,6 +113,7 @@
   <li data-target="#demo" data-slide-to="0" class="active"></li>
   <li data-target="#demo" data-slide-to="1"></li>
   <li data-target="#demo" data-slide-to="2"></li>
+  <li data-target="#demo" data-slide-to="3"></li>
 </ul>
 
 <!-- The slideshow -->
@@ -144,16 +142,9 @@
 </div>
 
 
-
-<br><br><br>
      
-     <h2 style="text-align:center">Mercado de tunning no Brasil </h2><br>
+     <h2 align="center" style="margin-top: 5%">Mercado de tunning no Brasil </h2><br>
      
-     <style>
-         div.a {
-             text-indent: 30px;
-         }  
-         </style>
      
          <div class="a">
      <p> Podemos dizer que o mercado era bastante tímido até chegar por aqui o primeiro dos filmes da franquia Velozes e Furiosos, no início dos anos 2000.
@@ -204,13 +195,8 @@
      
            </p>
            </div>
-     <br>
-        <h3 style="text-align:center">Mercado de tunning no Mundo </h3>   
-        <style>
-           div.a {
-               text-indent: 30px;
-           }  
-           </style>
+        <h3 align="center">Mercado de tunning no Mundo </h3>   
+
        
            <div class="a">
      <p> Os tipos de tunning mudam de país para país.
@@ -249,14 +235,9 @@
          
      </p>
      </div>
-     <br>
+
      
-     <h3 style="text-align:center">Até que ponto posso customizar?</h3>
-     <style>
-         div.a {
-             text-indent: 30px;
-         }  
-         </style>
+     <h3 align="center">Até que ponto posso customizar?</h3>
      
          <div class="a">
      
@@ -270,13 +251,8 @@
          Para esclarecer, vamos primeiro falar do rebaixamento de veículos.
        </div>
          
-       <br><br>
-         <h3 style="text-align:center">Pode rebaixar carros?</h3>
-         <style>
-             div.a {
-                 text-indent: 30px;
-             }  
-             </style>
+
+         <h3 align="center">Pode rebaixar carros?</h3>
          
              <div class="a">
          Como já alertado, a sua capacidade criativa esbarra na lei.
@@ -287,15 +263,10 @@
          
          Veja um trecho importante dela:
          </div>
-         <br><br>
+
          
-         <style>
-             div.a {
-                 text-indent: 30px;
-             }  
-             </style>
          
-             <div class="a">
+        <div class="a">
         <p> <b>
           “Art. 6º Os veículos de passageiros e de cargas, exceto veículos de duas ou três rodas e quadriciclos, usados, que sofrerem alterações no sistema de suspensão, ficam obrigados a atender aos limites e exigências previstos nesta Resolução, cabendo a cada entidade executora das modificações e ao proprietário do veículo a responsabilidade pelo atendimento às exigências em vigor.
          
@@ -321,12 +292,8 @@
          
          <p> §3º Os veículos que tiverem sua suspensão modificada, em qualquer condição de uso, deverão inserir no campo das observações do Certificado de Registro de Veículo – CRV e do Certificado de Registro e Licenciamento de Veículo – CRLV a altura livre do solo.”</b> </p></div>
          <br>
+        </div>
      
-         <style>
-             div.a {
-                 text-indent: 60px;
-             }  
-             </style>
          
              <div class="a">
                Como você pode ver, a suspensão pode tanto ser fixa quanto regulável.
@@ -356,13 +323,8 @@
          Se você não respeitar o disposto até aqui, sobre rebaixar o carro ou customizar rodas e pneus, estará sujeito à multa.
          
          E ela está descrita no mesmo artigo do Código de Trânsito Brasileiro (CTB).
-       </div><br>
+       </div>
          
-       <style>
-           div.a {
-               text-indent: 30px;
-           }  
-           </style>
        
            <div class="a">
              
@@ -378,15 +340,10 @@
          
          <p> Penalidade – multa;</p>
          
-        <p> Medida administrativa – retenção do veículo para regularização”.</b></p><br><br>
+        <p> Medida administrativa – retenção do veículo para regularização”.</b></p></div>
          
-         <style>
-                div.a {
-                    text-indent: 30px;
-                }  
-                </style>
             
-                <div class="a">
+        <div class="a">
          <p>Ou seja, se você for pego dirigindo um carro rebaixado sem regularização estará cometendo uma infração grave.
          
          Em razão disso, terá que pagar uma multa de R$ 195,23, receberá 5 pontos na carteira de habilitação (CNH) e o veículo ficará retido até a regularização.
@@ -399,17 +356,11 @@
             </p>
         </p>
      </div>
-     <br><br><br>
       
-     <h3 style="text-align:center">Regularização do veículo</h3>
-     <br>
-     <style>
-            div.a {
-                text-indent: 30px;
-            }  
-            </style>
-        
-            <div class="a">
+     <h3 align="center">Regularização do veículo</h3>
+
+       
+    <div class="a">
      Regularizar um veículo com tunning não é nenhuma tarefa de outro mundo.
 
      Primeiro, você terá que abrir um processo junto ao Detran.
@@ -422,19 +373,10 @@
      
      Ou seja, se abrir o processo menos vezes, terá que pagar menos taxas.
      
-     Já se fizer isso a cada nova alteração, terá um custo extra só pagando taxas.
-    <br><br>   
+     Já se fizer isso a cada nova alteração, terá um custo extra só pagando taxas.  
     </div>
-        
-
-     
-        <style>
-                div.a {
-                    text-indent: 30px;
-                }  
-                </style>
             
-                <div class="a">
+    <div class="a">
      <p>1. Apresente seu projeto ao Detran
      Lembre-se do que falamos sobre o que é permitido ou não.
 
@@ -504,22 +446,16 @@
      </p>
 
     </div>
-     </p>
-    
-           </div>
-
-<br><br><br><br><br><br><br><br>
           
 
 
                     
                     
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </body>
 <footer id="myFooter">
@@ -531,14 +467,14 @@
                 <div class="col-sm-12 col-md-6 col-lg-2">
                     <h5>Começo</h5>
                     <ul>
-                        <li><a href="motoramaindex.html">Inicio</a></li>
-                        <li><a href="#">Cadastrar</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="cad.html">Cadastrar</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-2">
-                    <h5>Sobre Nós</h5>
+                    <h5>Peças</h5>
                     <ul>
-                        <li><a href="#">Informação do Site</a></li>
+                        <li><a href="https://www.tuningparts.com.br/">Compre peças</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-2">
@@ -550,9 +486,9 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="social-networks">
-                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+                        <a href="erro.html" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="erro.html" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="erro.html" class="youtube"><i class="fa fa-youtube"></i></a>
                     </div>
                     <!--<a href="fale.html">
                     <button href="fale.html" type="button" class="btn btn-default botao">Fale Conosco</button></a>-->
