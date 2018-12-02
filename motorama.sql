@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 02-Dez-2018 às 16:11
+-- Generation Time: 02-Dez-2018 às 16:26
 -- Versão do servidor: 10.1.37-MariaDB
 -- versão do PHP: 7.2.12
 
@@ -104,7 +104,7 @@ CREATE TABLE `usuarios` (
   `data_nasc` datetime DEFAULT NULL,
   `data_conta` datetime DEFAULT CURRENT_TIMESTAMP,
   `tipo_usuario` int(11) NOT NULL,
-  `foto` int(255) NOT NULL
+  `foto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -112,8 +112,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nome`, `username`, `senha`, `data_nasc`, `data_conta`, `tipo_usuario`, `foto`) VALUES
-(1, 'joao', 'joao', '81dc9bdb52d04dc20036dbd8313ed055', '2018-11-15 00:00:00', '2018-11-30 16:54:19', 2, 0),
-(2, 'administrador', 'admin', '21232f297a57a5a743894a0e4a801fc3', '2018-11-15 00:00:00', '2018-11-30 20:59:30', 1, 0);
+(1, 'joao', 'joao', '81dc9bdb52d04dc20036dbd8313ed055', '2018-11-15 00:00:00', '2018-11-30 16:54:19', 2, 'https://e0.365dm.com/18/06/768x432/skysports-f1-kimi-raikkonen_4348213.jpg?20180628171614'),
+(2, 'administrador', 'admin', '21232f297a57a5a743894a0e4a801fc3', '2018-11-15 00:00:00', '2018-11-30 20:59:30', 1, '0');
 
 --
 -- Indexes for dumped tables
