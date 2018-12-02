@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 02-Dez-2018 às 16:26
--- Versão do servidor: 10.1.37-MariaDB
--- versão do PHP: 7.2.12
+-- Generation Time: Dec 02, 2018 at 07:06 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -25,27 +23,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `comentarios`
+-- Table structure for table `comentarios`
 --
 
 CREATE TABLE `comentarios` (
   `id_comentario` int(11) NOT NULL,
   `user_comentario` int(11) NOT NULL,
   `conteudo_comentario` varchar(200) NOT NULL,
-  `data_comentario` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `data_comentario` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `noticia` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `comentarios`
+-- Dumping data for table `comentarios`
 --
 
-INSERT INTO `comentarios` (`id_comentario`, `user_comentario`, `conteudo_comentario`, `data_comentario`) VALUES
-(102, 2, 'coe kkkkkkkkkkkkk', '2018-12-01 20:55:34');
+INSERT INTO `comentarios` (`id_comentario`, `user_comentario`, `conteudo_comentario`, `data_comentario`, `noticia`) VALUES
+(12, 2, '123', '2018-12-02 16:03:14', 9),
+(13, 2, 'teste', '2018-12-02 16:04:25', 10);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `noticias`
+-- Table structure for table `noticias`
 --
 
 CREATE TABLE `noticias` (
@@ -60,21 +60,21 @@ CREATE TABLE `noticias` (
   `par4` varchar(1000) DEFAULT NULL,
   `img4` varchar(1000) DEFAULT NULL,
   `data` datetime DEFAULT CURRENT_TIMESTAMP,
-  `original_poster` int(11) DEFAULT NULL,
-  `comentarios` int(11) DEFAULT NULL
+  `original_poster` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `noticias`
+-- Dumping data for table `noticias`
 --
 
-INSERT INTO `noticias` (`id_noticia`, `titulo`, `par1`, `img1`, `par2`, `img2`, `par3`, `img3`, `par4`, `img4`, `data`, `original_poster`, `comentarios`) VALUES
-(6, 'hmhm', 'rsrs', 'hehe.gif', 'oie', 'coe salve', '', '', '', '', '2018-12-01 15:28:22', 2, NULL);
+INSERT INTO `noticias` (`id_noticia`, `titulo`, `par1`, `img1`, `par2`, `img2`, `par3`, `img3`, `par4`, `img4`, `data`, `original_poster`) VALUES
+(9, 'dwqdqw', 'dwqdqw', 'dwqdqw', '', '', '', '', '', '', '2018-12-02 15:37:56', 2),
+(10, 'teste 123', 'fabiano', 'araujo', '', '', '', '', '', '', '2018-12-02 15:49:18', 2);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tipo_usuario`
+-- Table structure for table `tipo_usuario`
 --
 
 CREATE TABLE `tipo_usuario` (
@@ -83,7 +83,7 @@ CREATE TABLE `tipo_usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `tipo_usuario`
+-- Dumping data for table `tipo_usuario`
 --
 
 INSERT INTO `tipo_usuario` (`id_tipo_usuario`, `nome`) VALUES
@@ -93,7 +93,7 @@ INSERT INTO `tipo_usuario` (`id_tipo_usuario`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -103,17 +103,16 @@ CREATE TABLE `usuarios` (
   `senha` varchar(45) NOT NULL,
   `data_nasc` datetime DEFAULT NULL,
   `data_conta` datetime DEFAULT CURRENT_TIMESTAMP,
-  `tipo_usuario` int(11) NOT NULL,
-  `foto` varchar(255) NOT NULL
+  `tipo_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `usuarios`
+-- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nome`, `username`, `senha`, `data_nasc`, `data_conta`, `tipo_usuario`, `foto`) VALUES
-(1, 'joao', 'joao', '81dc9bdb52d04dc20036dbd8313ed055', '2018-11-15 00:00:00', '2018-11-30 16:54:19', 2, 'https://e0.365dm.com/18/06/768x432/skysports-f1-kimi-raikkonen_4348213.jpg?20180628171614'),
-(2, 'administrador', 'admin', '21232f297a57a5a743894a0e4a801fc3', '2018-11-15 00:00:00', '2018-11-30 20:59:30', 1, '0');
+INSERT INTO `usuarios` (`id_usuario`, `nome`, `username`, `senha`, `data_nasc`, `data_conta`, `tipo_usuario`) VALUES
+(1, 'joao', 'joao', '81dc9bdb52d04dc20036dbd8313ed055', '2018-11-15 00:00:00', '2018-11-30 16:54:19', 2),
+(2, 'administrador', 'admin', '21232f297a57a5a743894a0e4a801fc3', '2018-11-15 00:00:00', '2018-11-30 20:59:30', 1);
 
 --
 -- Indexes for dumped tables
@@ -124,15 +123,15 @@ INSERT INTO `usuarios` (`id_usuario`, `nome`, `username`, `senha`, `data_nasc`, 
 --
 ALTER TABLE `comentarios`
   ADD PRIMARY KEY (`id_comentario`),
-  ADD KEY `user_comentario` (`user_comentario`);
+  ADD KEY `user_comentario` (`user_comentario`),
+  ADD KEY `noticia` (`noticia`);
 
 --
 -- Indexes for table `noticias`
 --
 ALTER TABLE `noticias`
   ADD PRIMARY KEY (`id_noticia`),
-  ADD KEY `fk_noticias_usuarios1_idx` (`original_poster`),
-  ADD KEY `comentarios` (`comentarios`);
+  ADD KEY `fk_noticias_usuarios1_idx` (`original_poster`);
 
 --
 -- Indexes for table `tipo_usuario`
@@ -155,49 +154,44 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
-
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id_noticia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
+  MODIFY `id_noticia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `tipo_usuario`
 --
 ALTER TABLE `tipo_usuario`
   MODIFY `id_tipo_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- Constraints for dumped tables
 --
 
 --
--- Limitadores para a tabela `comentarios`
+-- Constraints for table `comentarios`
 --
 ALTER TABLE `comentarios`
-  ADD CONSTRAINT `comentarios_ibfk_1` FOREIGN KEY (`user_comentario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `comentarios_ibfk_1` FOREIGN KEY (`user_comentario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `comentarios_ibfk_2` FOREIGN KEY (`noticia`) REFERENCES `noticias` (`id_noticia`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Limitadores para a tabela `noticias`
+-- Constraints for table `noticias`
 --
 ALTER TABLE `noticias`
-  ADD CONSTRAINT `noticias_ibfk_1` FOREIGN KEY (`original_poster`) REFERENCES `usuarios` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `noticias_ibfk_2` FOREIGN KEY (`comentarios`) REFERENCES `comentarios` (`id_comentario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `noticias_ibfk_1` FOREIGN KEY (`original_poster`) REFERENCES `usuarios` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Limitadores para a tabela `usuarios`
+-- Constraints for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`tipo_usuario`) REFERENCES `tipo_usuario` (`id_tipo_usuario`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
