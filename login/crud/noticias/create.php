@@ -28,9 +28,7 @@ if($_POST) {
 
     if($connect->query($sql) === TRUE) 
     {
-        echo "<p>Notícia criada com sucesso!</p>";
-        echo "<a href='../../index.php'><button type='button'>Início</button></a>";
-        exit;
+        header("Location: ../../index.php");
     }
     else
     {

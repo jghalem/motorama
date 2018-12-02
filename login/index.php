@@ -40,9 +40,8 @@ echo "</br>Não há nenhuma notícia de sua autoria!\n";
 if ($_SESSION['tipo_usuario'] == '1')
 {
 echo " | <a href='criar_noticia.php'><button type='text'>Postar nova notícia</button></a>\n";
-echo " | <a href='editar_usuarios.php'><button type='text'>Modificar Usuários</button></a>";
-echo " | <a href='editar_cargos.php'><button type='text'>Modificar Cargos</button></a>";
-echo " | <a href='sair.php'><button type='text'>Sair do Sistema</button></a>"; 
+echo " | <a href='editar_usuarios.php'><button type='text'>Modificar Usuários</button></a>\n";
+echo " | <a href='sair.php'><button type='text'>Sair do Sistema</button></a>\n"; 
 
 echo "</br></br>\n"; 
 }
@@ -50,7 +49,7 @@ echo "</br></br>\n";
 // Botões cabeçalho - usuários
 else if ($_SESSION['tipo_usuario'] !== '1')
 {
-echo " | <a href='sair.php'><button type='text'>Sair do Sistema</button></a>"; 
+echo " | <a href='sair.php'><button type='text'>Sair do Sistema</button></a>\n"; 
 echo "</br></br>\n"; 
 }
 
@@ -72,13 +71,13 @@ if($result->num_rows <> 0)
 { 
 // Abre tabela HTML 
 echo "<table border=1 cellpadding=3 cellspacing=0>\n";
-echo "<tr><th>ID</th><th>Título</th><th>Par 1</th><th>Img 1</th><th>Postado em:</th>";
+echo "<tr><th>ID</th><th>Título</th><th>Par 1</th><th>Img 1</th><th>Postado em:</th>\n";
 
 // Efetua o loop no banco de dados 
 while($dados=$result->fetch_array())
 //while($dados = mysql_fetch_array($result_id)) 
 { 
-echo "<tr><td>" . $dados["id_noticia"] . "</td><td>";
+echo "<tr><td>" . $dados["id_noticia"] . "</td><td>\n";
 echo "<a href=ver_noticia.php?id=".$dados["id_noticia"]. ">" . stripslashes($dados["titulo"]);
 echo "</a></td>"; 
 

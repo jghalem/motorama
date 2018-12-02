@@ -5,9 +5,10 @@ require_once "../../validar.php";
  
 if($_REQUEST) {
     $id = $_GET['id_comentario'];
+    $user_comentario = $_GET['user_comentario'];
     $id_noticia = $_GET['id_noticia'];
 
-    if ($_SESSION['tipo_usuario'] == "1")
+    if ($user_comentario == $_SESSION['id_usuario'] OR $_SESSION['tipo_usuario'] == "1")
     {
     $sql = "DELETE FROM comentarios WHERE id_comentario = ".$id;
     }

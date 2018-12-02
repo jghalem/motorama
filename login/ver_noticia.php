@@ -4,8 +4,9 @@ require_once "crud/db_connect.php";
 //Validação de usuário
 require_once "validar.php";
 
+$id_noticia = $_GET['id'];
 //Buscando a notícia no banco de dados e imprimindo
-$sql = 'SELECT id_noticia,titulo,par1,img1,par2,img2,par3,img3,par4,img4,original_poster from noticias where id_noticia =' .$_GET['id'];
+$sql = 'SELECT id_noticia,titulo,par1,img1,par2,img2,par3,img3,par4,img4,original_poster from noticias where id_noticia =' .$id_noticia;
 $resultado = $connect->query($sql);
 
 while($dados=$resultado->fetch_array()){
@@ -42,13 +43,13 @@ echo '<a href="./index.php"><button type="text">Início</button></a>';
 //Comentários
 
 echo '</br></br><b>Deixe seu comentário:</b></br>';
-echo '<form action="crud/comentarios/create.php?id='.$_GET['id'].'" method="get">';
+echo '<form action="crud/comentarios/create.php?id='.$id_noticia.'" method="get">';
 echo '<textarea name="conteudo_comentario" rows="4" cols="50" maxlength="200"></textarea></br>';
-echo '<input type="hidden" name="id_noticia" value='.$_GET['id'].'></br>';
+echo '<input type="hidden" name="id_noticia" value='.$id_noticia.'></br>';
 echo '<button type="submit">Postar</button> | <button type="reset">Limpar</button>';
 echo '</form>';
 
-$sqlc = 'SELECT id_comentario,user_comentario,conteudo_comentario,data_comentario from comentarios ORDER BY data_comentario DESC';
+$sqlc = 'SELECT id_comentario,user_comentario,conteudo_comentario,data_comentario,noticia from comentarios WHERE noticia =' .$id_noticia;
 $result = $connect->query($sqlc);
 
 /*$sqlc1 = 'SELECT * from usuarios WHERE username ='.;
@@ -79,10 +80,10 @@ echo '</a> *';
 echo '</a></b> disse, às '.$dadosc["data_comentario"].':</br>';
 echo ''.$dadosc["conteudo_comentario"].'</br></br>';
 //Caso seja admin, terá acesso aos botões de edição de comentário
-if ($_SESSION['tipo_usuario'] == '1')
+if ($_SESSION['id_usuario'] == $dadosc['user_comentario'] OR $_SESSION['tipo_usuario'] == '1')
 {
-echo "<a href='editar_comentario.php?id_comentario=".$dadosc['id_comentario']."&id_noticia=".$_GET['id']."&conteudo_comentario=".$dadosc['conteudo_comentario']."'><button type='text'>Editar</button></a>";
-echo " | <a href='crud/comentarios/remove.php?id_comentario=".$dadosc['id_comentario']."&id_noticia=".$_GET['id']."'><button type='text'>Deletar</button></a></br></br>";
+echo "<a href='editar_comentario.php?id_comentario=".$dadosc['id_comentario']."&id_noticia=".$id_noticia."&conteudo_comentario=".$dadosc['conteudo_comentario']."'><button type='text'>Editar</button></a>";
+echo " | <a href='crud/comentarios/remove.php?id_comentario=".$dadosc['id_comentario']."&id_noticia=".$id_noticia."&user_comentario=".$dadosc['user_comentario']."'><button type='text'>Deletar</button></a></br></br>";
 }
 echo "</br>";
 }
