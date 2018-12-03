@@ -73,10 +73,7 @@ $user = $dadosc1["username"];
 $tipo = $dadosc1["tipo_usuario"];
 //Modelo de comentário
 echo '<a href="perfil.php?id= '.$user.'"><b>'.$user;
-if ($user == "1")
-{
-echo '</a> *';
-}
+
 echo '</a></b> disse, às '.$dadosc["data_comentario"].':</br>';
 echo ''.$dadosc["conteudo_comentario"].'</br></br>';
 //Caso seja admin, terá acesso aos botões de edição de comentário

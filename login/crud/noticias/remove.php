@@ -9,7 +9,9 @@ if($_REQUEST) {
 
     if ($_SESSION['tipo_usuario'] == "1") 
     {
+    $sql1 = "DELETE FROM comentarios WHERE noticia = {$id}";
     $sql = "DELETE FROM noticias WHERE id_noticia = {$id}";
+    
     }
     else if ($_SESSION['tipo_usuario'] !== "1") 
     {
@@ -17,10 +19,12 @@ if($_REQUEST) {
         echo "<a href='../../index.php'><button type='button'>Início</button></a>";
         exit;
     }
+    if($connect->query($sql1) === TRUE) {
     if($connect->query($sql) === TRUE) {
         echo "<p>Notícia apagada com sucesso!</p>";
         echo "<a href='../../index.php'><button type='button'>Início</button></a>";
         exit;
+    }
     } else {
         echo "Erro ao apagar notícia: " . $connect->error;
     }
